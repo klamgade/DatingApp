@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatingApp.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20180924221010_AddedUserEntity")]
-    partial class AddedUserEntity
+    [Migration("20181003012011_addeduserentity")]
+    partial class addeduserentity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
