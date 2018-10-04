@@ -23,5 +23,14 @@ login(model: any) {
   })
   );
 }
+
+  register(model: any) {
+    return this.http.post(this.baseUrl + 'register', model);
+    // .pipe(map((response: any) => {
+    //   const user = response;
+    //   localStorage.setItem('user', user.Username);
+    // })
+    // );
+  }
 }
 
