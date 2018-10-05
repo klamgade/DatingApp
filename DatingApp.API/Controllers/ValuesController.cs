@@ -45,7 +45,7 @@ namespace DatingApp.API.Controllers
         {
         }
 
-        // PUT api/values/5
+        // PUT api/values/5F
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
