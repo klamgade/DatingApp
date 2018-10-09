@@ -1,11 +1,9 @@
-using System;
-using System.Linq;
 using System.Threading.Tasks;
+using DatingApp.API.Data.IRepositories;
 using DatingApp.API.Models;
 using Microsoft.EntityFrameworkCore;
-using DatingApp.API.Controllers.Data.IRepositories;
 
-namespace DatingApp.API.Controllers.Data.Repositories
+namespace DatingApp.API.Data
 {
     public class AuthRepository : IAuthRepository
     {
@@ -15,8 +13,7 @@ namespace DatingApp.API.Controllers.Data.Repositories
         {
             _dataContext = dataContext;
         }
-
-        public async Task<User> Register(User user, string password)
+        public async Task<User> Register (User user, string password)
         {
             byte[] passwordHash, passwordSalt;
             createPasswordHash(password, out passwordHash, out passwordSalt);

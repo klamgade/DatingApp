@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using DatingApp.API.Models;
 using Newtonsoft.Json;
 
-namespace DatingApp.API.Controllers.Data
+namespace DatingApp.API.Data
 {
     public class Seed
     {

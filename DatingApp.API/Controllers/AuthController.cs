@@ -1,12 +1,12 @@
 using System.Threading.Tasks;
-using DatingApp.API.Controllers.Data.IRepositories;
+using DatingApp.API.Data.IRepositories;
 using DatingApp.API.DTOs;
 using DatingApp.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using DatingApp.API.Controllers.Data;
+using DatingApp.API.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
