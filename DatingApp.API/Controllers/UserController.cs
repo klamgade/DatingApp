@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using DatingApp.API.Data.IRepositories;
@@ -25,7 +26,7 @@ namespace DatingApp.API.Controllers
         public async Task<IActionResult> GetUsers()
         {
             var users = await _datingRepo.GetUsers();
-            var usersToReturn = _mapper.Map<UsersForListDTO>(users);
+            var usersToReturn = _mapper.Map<List<UsersForListDTO>>(users);
 
             return Ok(usersToReturn);
         }
