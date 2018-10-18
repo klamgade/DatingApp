@@ -5,10 +5,13 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './nav/nav.component';
 import { FormsModule} from '@angular/forms';
-import { AuthService } from '../services/Auth.service';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
-import { ErrorInterceptorProvider } from '../services/error.interceptor';
+import { AuthService } from 'src/_services/Auth.service';
+import { ErrorInterceptorProvider } from 'src/_services/error.interceptor';
+import { UserService } from 'src/_services/user.service';
+import { MemberListComponent } from './members/member-list/member-list.component';
+import { MemberCardComponent } from './members/member-card/member-card.component';
 
 
 @NgModule({
@@ -16,7 +19,9 @@ import { ErrorInterceptorProvider } from '../services/error.interceptor';
       AppComponent,
       NavComponent,
       HomeComponent,
-      RegisterComponent
+      RegisterComponent,
+      MemberListComponent,
+      MemberCardComponent
    ],
    imports: [
       BrowserModule,
@@ -25,7 +30,8 @@ import { ErrorInterceptorProvider } from '../services/error.interceptor';
    ],
    providers: [
       AuthService,
-      ErrorInterceptorProvider
+      ErrorInterceptorProvider,
+      UserService
    ],
    bootstrap: [
       AppComponent
